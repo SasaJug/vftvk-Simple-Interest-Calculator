@@ -1,16 +1,37 @@
-<html>
-    <head>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+</head>
+<body>
+<div class="card">
+    <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+    <div class="calculator">
+        <form oninput="displaySliderValue()">
+        <table>
+            <tr>
+                <td>Amount</td>
+                <td><input type="number" id="principal"></td>
+            </tr>
+            <tr>
+                <td>Rate</td>
+                <td><input id="rate" type="range" min="1" max="100" value="0"><output id="output" name="x" for="rate"></output>
+                </td>
+            </tr>
+            <tr>
+                <td>No. of Years</td>
+                <td><select id="years"></select></td>
+            </tr>
+            <tr>
+                <td>Interest :</td>
+                <td><span id="result"></span></td>
+            </tr>
+        </table>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+            <input name="form" type="submit" value="Compute"/>
+        </form>
+    </div>
+</div>
+</body>
 </html>

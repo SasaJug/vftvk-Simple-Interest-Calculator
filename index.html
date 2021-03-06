@@ -8,15 +8,15 @@
     <h1>Simple Interest Calculator</h1>
 
     <div class="calculator">
-        <form oninput="displaySliderValue()">
+        <form oninput="displaySliderValue()" onsubmit="displayResult(); return false">
         <table>
             <tr>
                 <td>Amount</td>
-                <td><input type="number" id="principal"></td>
+                <td><input type="number" id="principal" required></td>
             </tr>
             <tr>
-                <td>Rate</td>
-                <td><input id="rate" type="range" min="1" max="100" value="0"><output id="output" name="x" for="rate"></output>
+                <td>Interest Rate</td>
+                <td><input id="rate" type="range" min="1" max="10" step="0.1" value="1"><output id="output" name="x" for="rate"></output>
                 </td>
             </tr>
             <tr>
@@ -24,12 +24,15 @@
                 <td><select id="years"></select></td>
             </tr>
             <tr>
-                <td>Interest :</td>
-                <td><span id="result"></span></td>
+                <td> <input name="form" type="submit" value="Compute Interest"/></td>
             </tr>
+            <tr>
+                <td id="result"></td>
+            </tr>
+
         </table>
 
-            <input name="form" type="submit" value="Compute"/>
+
         </form>
     </div>
 </div>

@@ -39,9 +39,7 @@ function getFinalAmount(){
 function getFinalYear(){
     var years = document.getElementById("years").value;
     var today = new Date();
-    var futureDate = today.setDate(today.getDate() + 365 * years);
-    console.log(years);
-    console.log(futureDate);
-    return futureDate;
+    var futureDate = today.setDate(365*years);
+    return new Date(today).getFullYear();
 }
         
